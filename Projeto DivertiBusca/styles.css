@@ -1,0 +1,307 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: lightblue;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    background-image: linear-gradient(to right, #333, #666);
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: lightblue;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: skyblue;
+}
+
+/* Main Sections */
+.section {
+    background-color: #fff;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: lightblue;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+    }
+}
+
+/* Adicionando transições suaves */
+.section {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Animação ao passar o mouse */
+.section:hover {
+    background-color: #f2f2f2; /* Nova cor de fundo ao passar o mouse */
+    color: black; /* Nova cor do texto ao passar o mouse */
+}
+
+/* Animação de entrada */
+.image-overlay {
+    opacity: 5; /* Inicialmente invisível */
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+}
+
+#news:hover .image-overlay {
+    opacity: 1; /* Torna o overlay visível ao passar o mouse na seção de notícias */
+}
+
+/* Adicione estilos para o ícone de pesquisa */
+.search-icon {
+    cursor: pointer;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon i {
+    font-size: 18px;
+    color: #a1a1a1; /* Cor do ícone */
+    transition: color 0.3s; /* Transição de cor suave */
+}
+
+.search-icon:hover i {
+    color: #ffffff; /* Altera a cor do ícone ao passar o mouse por cima */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    cursor: pointer;
+    padding: 10px;
+    background-color: deepskyblue;
+    border-radius: 5px 0 0 5px;
+    color: white;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    width: 0; /* Inicia com largura zero */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    transition: width 0.3s ease; /* Adiciona uma transição suave para a largura */
+}
+
+.search-bar input[type="text"]:focus {
+    width: 200px; /* Aumenta a largura ao receber foco */
+}
+
+/* Estilos para o corpo e fontes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Estilos para os cabeçalhos */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilos para o formulário */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o rodapé */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
